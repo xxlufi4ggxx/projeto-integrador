@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Salão de Beleza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #333; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: lightblue; 
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: white; 
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #555; 
+            color: white; 
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: lightblue; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: deepskyblue; 
+        }
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento de Horários</h1>
+        <form id="agendamentoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="servico">Serviço:</label>
+            <select id="servico" required>
+                <option value="Corte de Cabelo">Corte de Cabelo</option>
+                <option value="Tintura">Tintura</option>
+                <option value="Tratamento Capilar">Tratamento Capilar</option>
+            </select>
+
+            <label for="profissional">Profissional:</label>
+            <select id="profissional" required>
+                <option value="João">João</option>
+                <option value="Maria">Maria</option>
+                <option value="Ana">Ana</option>
+            </select>
+
+            <label for="formatoRosto">Formato do Rosto:</label>
+            <select id="formatoRosto" required>
+                <option value="Oval">Oval</option>
+                <option value="Redondo">Redondo</option>
+                <option value="Quadrado">Quadrado</option>
+            </select>
+
+            <label for="tomPele">Tom de Pele:</label>
+            <select id="tomPele" required>
+                <option value="Claro">Claro</option>
+                <option value="Médio">Médio</option>
+                <option value="Escuro">Escuro</option>
+            </select>
+
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script src="integrador.js"></script>
+</body>
+</html>
